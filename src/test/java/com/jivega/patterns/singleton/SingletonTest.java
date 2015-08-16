@@ -9,29 +9,19 @@ public class SingletonTest {
 		Runnable run = new Runnable() {
 			public void run() {
 				try {
-					Thread.sleep(10);
-					for (int i = 0; i < 200; i++) {
+					Thread.sleep(500);
+					for (int i = 0; i < 10; i++) {
 						//Thread.sleep(0);
 						SingletonOne singletonOne = SingletonOne.getInstance();
-						// System.out.print(i + "\n" + "...");
 					}
 				} catch (Exception e) {
 					System.out.println(" interrupted");
 				}
 			}
 		};
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
-		new Thread(run).start();
+		for ( int i = 0 ; i < 1000 ; i++) {
+			new Thread(run).start();
+		}
 		try {
 			Thread.sleep(1000);
 		} catch (Exception e) {
