@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SingletonTest {
 	@Test
-	public void testOneInstanceSingleton() {
+	public void testOneInstanceSingletonOne() {
 		Runnable run = new Runnable() {
 			public void run() {
 				try {
