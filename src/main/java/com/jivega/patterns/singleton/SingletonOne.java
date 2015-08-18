@@ -8,6 +8,7 @@ public class SingletonOne {
 		return numberOfInstances;
 	}
 	private SingletonOne(){
+		System.out.println("Constructor SingletonOne");
 		numberOfInstances++;
 	}
 	public static synchronized SingletonOne getInstance() throws InterruptedException {

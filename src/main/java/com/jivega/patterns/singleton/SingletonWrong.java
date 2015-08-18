@@ -10,12 +10,13 @@ public class SingletonWrong {
 
 	// Private constructor. To be called from this class
 	private SingletonWrong() {
+		System.out.println("Constructor");
 		numberOfInstances++;
 	}
 
 	public static SingletonWrong getInstance() throws InterruptedException {
 		if (singletonWrong == null) {
-			Thread.sleep(10);
+			System.out.println("Calling Constructor");
 			singletonWrong = new SingletonWrong();
 		}
 		return singletonWrong;
